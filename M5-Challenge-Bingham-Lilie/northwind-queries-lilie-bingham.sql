@@ -8,7 +8,7 @@ use northwind;
 select *
 from products 
 where product_name 
-like '%Dell%'
+like '%Dell%';
 
 -- List all the orders shipped to Pennsylvania.
 use northwind;
