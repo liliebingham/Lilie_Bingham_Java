@@ -9,7 +9,6 @@ select *
 from products 
 where product_name 
 like '%Dell%'
--- FIXME
 
 -- List all the orders shipped to Pennsylvania.
 use northwind;
