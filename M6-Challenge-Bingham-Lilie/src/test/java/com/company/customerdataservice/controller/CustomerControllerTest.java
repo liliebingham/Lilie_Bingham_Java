@@ -26,7 +26,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(CustomerController.class)
-@Import(AopAutoConfiguration.class)
 public class CustomerControllerTest {
 
     @Autowired
@@ -34,6 +33,8 @@ public class CustomerControllerTest {
 
     @MockBean
     private CustomerRepository customerRepo;
+
+
 
     // ObjectMapper used to convert Java objects to JSON and vice versa
     private ObjectMapper mapper = new ObjectMapper();
@@ -45,7 +46,7 @@ public class CustomerControllerTest {
 
     // Testing POST /customers
     @Test
-    public void shouldReturnNewRecordOnPostRequest() throws Exception {
+    public void shouldReturnNewCustomerOnPostRequest() throws Exception {
 
         // ARRANGE
         Customer inputCustomer = new Customer();
